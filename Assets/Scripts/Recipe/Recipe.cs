@@ -33,10 +33,10 @@ public class Recipe : MonoBehaviour
 
         for (int i = 0; i < Random.Range(2, 5); i++)
         {
-            recipe.Add(Random.Range(1, ingredients.Count-1));
+            recipe.Add(Random.Range(2, ingredients.Count-1));
         }
         
-        recipe.Add(0);
+        recipe.Add(1);
     }
     
     public List<int> GetRecipeIngredients() { return _recipe; }
