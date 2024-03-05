@@ -17,4 +17,12 @@ public class Dish : MonoBehaviour
     {
         
     }
+
+    void PlaceIngredient(GameObject ing)
+    {
+        if (ing.CompareTag("Ingredients"))
+        {
+            Debug.Log("Place ingredient on dish");
+        }
+    }
 }
