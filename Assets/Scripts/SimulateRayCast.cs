@@ -23,16 +23,28 @@ public class SimulateRayCast : MonoBehaviour
         worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
         transform.position = worldPosition;
 
-        
+        if (SelectedObject != null)
+        {
+            if (Input.GetKey(KeyCode.Mouse0))
+            {
+                SelectedObject.transform.position = worldPosition;
+            }
+        }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (Input.GetKey(KeyCode.Mouse0) && other.tag == "MovableObj")
+        Debug.Log(other.tag);
+        if (other.CompareTag("Ingredients"))
         {
             SelectedObject = other.gameObject;
-            SelectedObject.transform.position = worldPosition;
+            Debug.Log("grabbing");
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        SelectedObject = null;
     }
 }
 
