@@ -48,3 +48,4 @@ MonoBehaviour:
   - {fileID: 8670920203144514471, guid: 21d0943618ab86f4ea82f93ff3448feb, type: 3}
   - {fileID: 8859528538581331235, guid: c423d7b1412b01f4dbe74bd5383e2cca, type: 3}
   - {fileID: 689017844241341700, guid: 48de6c526714a7e4a8465ecbad86d6cd, type: 3}
+  _recipePrefab: {fileID: 7843382039377019638, guid: 04ac3eb68ba4c934993f2ce379fcefd7, type: 3}

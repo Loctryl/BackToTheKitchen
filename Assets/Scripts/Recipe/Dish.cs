@@ -18,6 +18,8 @@ public class Dish : MonoBehaviour
         
     }
 
+    public List<int> GetIngredients() { return _ingredients; }
+
     void PlaceIngredient(GameObject ing)
     {
         if (ing.CompareTag("Ingredients"))
