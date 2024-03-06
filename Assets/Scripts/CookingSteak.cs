@@ -9,7 +9,7 @@ public class CookingSteak : MonoBehaviour
     [SerializeField] private Mesh cookedMesh;
     [SerializeField] private Mesh trashMesh;
     [SerializeField] private GameObject particuleSystem;
-    [SerializeField] private float elapsedTime = 3;
+    [SerializeField] private float elapsedTime = 180;
 
     private bool Cooking = false;
 
@@ -22,7 +22,7 @@ public class CookingSteak : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!Cooking)
+        if (Cooking)
         {
             TimerCooking();
         }
