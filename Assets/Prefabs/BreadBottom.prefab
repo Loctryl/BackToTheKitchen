@@ -99,8 +99,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5, y: 0.3, z: 0.5}
-  m_Center: {x: 0, y: 0.27, z: 0}
+  m_Size: {x: 0.8, y: 0.2, z: 0.8}
+  m_Center: {x: 0, y: 0.3, z: 0}
 --- !u!114 &2422300278453826061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 2
   m_AttachTransform: {fileID: 6613452943059094262}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -225,7 +225,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.7, y: 0.2, z: 0.7}
+  m_Size: {x: 0.65, y: 0.2, z: 0.65}
   m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!54 &2841733952499619012
 Rigidbody:
@@ -272,7 +272,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -462,7 +462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69aec62c4880bf94db27b8f5412447f5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69aec62c4880bf94db27b8f5412447f5, type: 3}
       propertyPath: m_LocalRotation.w
