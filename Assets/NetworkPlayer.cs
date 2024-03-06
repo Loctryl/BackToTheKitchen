@@ -9,9 +9,9 @@ public class NetworkPlayer : MonoBehaviour
 
 
 
-    public PhotonTransformView head;
-    public PhotonTransformView leftHand;
-    public PhotonTransformView rightHand;
+    public Transform head;
+    public Transform leftHand;
+    public Transform rightHand;
     public PhotonView photonView;
 
 
@@ -43,8 +43,6 @@ public class NetworkPlayer : MonoBehaviour
 
     private void MapPosition()
     {
-        head.
-
         head.position = XRHead.position;
         head.rotation = XRHead.rotation;
 
