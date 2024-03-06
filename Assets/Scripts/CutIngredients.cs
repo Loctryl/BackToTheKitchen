@@ -6,6 +6,7 @@ public class CutIngredients : MonoBehaviour
 {
     [SerializeField] private int hitCount = 5;
     [SerializeField] private GameObject slicedObj;
+    [SerializeField] public int instantiateNumber = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +23,15 @@ public class CutIngredients : MonoBehaviour
     {
         if (collision.collider.CompareTag("Destroyer"))
         {
+            Debug.Log("bing");
             if (hitCount <= 0)
             {
-                Debug.Log("bing");
-                Instantiate(slicedObj);
+                Debug.Log("bong");
+                for (int i = 0; i < instantiateNumber; i++)
+                {
+                    GameObject lettuce = Instantiate(slicedObj, transform);
+                    lettuce.transform.parent = null;
+                }
                 Destroy(gameObject);
             }
             else

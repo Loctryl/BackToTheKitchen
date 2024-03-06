@@ -17,13 +17,12 @@ public class CookingSteak : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        filter = GetComponent<MeshFilter>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Cooking)
+        if (!Cooking)
         {
             TimerCooking();
         }
