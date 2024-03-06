@@ -7,9 +7,11 @@ using Photon.Pun;
 public class NetworkPlayer : MonoBehaviour
 {
 
-    public Transform head;
-    public Transform leftHand;
-    public Transform rightHand;
+
+
+    public PhotonTransformView head;
+    public PhotonTransformView leftHand;
+    public PhotonTransformView rightHand;
     public PhotonView photonView;
 
 
@@ -21,6 +23,10 @@ public class NetworkPlayer : MonoBehaviour
     void Start()
     {
        photonView = GetComponent<PhotonView>();
+
+        rightHand.gameObject.SetActive(true);
+        leftHand.gameObject.SetActive(true);
+        head.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
@@ -29,11 +35,6 @@ public class NetworkPlayer : MonoBehaviour
     
         if (photonView.IsMine)
         {
-
-            rightHand.gameObject.SetActive(true);
-            leftHand.gameObject.SetActive(true);
-            head.gameObject.SetActive(true);
-
             MapPosition();
         }
       
@@ -42,6 +43,7 @@ public class NetworkPlayer : MonoBehaviour
 
     private void MapPosition()
     {
+        head.
 
         head.position = XRHead.position;
         head.rotation = XRHead.rotation;
