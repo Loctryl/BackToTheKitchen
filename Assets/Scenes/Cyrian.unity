@@ -3687,7 +3687,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18f2fbabe493fea4bbc1d1afd112f6d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1029172486883312052, guid: b0527726e49d27c4fa3eb2e30e4d7dbc, type: 3}
+  player: {fileID: 1029172486883312052, guid: 9b93adc6dd6615c4bae188bdf6142b7d, type: 3}
+  _cam: {fileID: 1336582486}
+  _leftHand: {fileID: 1336582485}
+  _rightHand: {fileID: 1336582483}
 --- !u!1 &386669524
 GameObject:
   m_ObjectHideFlags: 0
@@ -4004,11 +4007,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7387125324240799344, guid: efebdf03cb1ccd043827e933755e413e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7387125324240799344, guid: efebdf03cb1ccd043827e933755e413e, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7387125324240799344, guid: efebdf03cb1ccd043827e933755e413e, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -4016,7 +4019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7387125324240799344, guid: efebdf03cb1ccd043827e933755e413e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15826,12 +15829,20 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1868169030}
     m_Modifications:
     - target: {fileID: 202364692, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_ModelPrefab
       value: 
       objectReference: {fileID: 5178874541663582274, guid: dbc5ffd3fd8daad4abb3c5418005ac32, type: 3}
+    - target: {fileID: 202364692, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_UIScrollAction.m_Action.m_Id
+      value: 9f818a9a-4ede-4f31-8b0b-5877d11ff8c1
+      objectReference: {fileID: 0}
+    - target: {fileID: 202364692, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_IsTrackedAction.m_Action.m_Id
+      value: 33110576-362c-45c3-b70f-7c429f22af74
+      objectReference: {fileID: 0}
     - target: {fileID: 1319746310, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_Reticle
       value: 
@@ -15844,6 +15855,14 @@ PrefabInstance:
       propertyPath: m_ModelPrefab
       value: 
       objectReference: {fileID: 6555419221710393435, guid: 25523c402d9f0384b8989981757bdb5a, type: 3}
+    - target: {fileID: 1670256628, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_UIScrollAction.m_Action.m_Id
+      value: 63047ba6-22a5-4ca8-bfe1-53d7f26c4452
+      objectReference: {fileID: 0}
+    - target: {fileID: 1670256628, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_IsTrackedAction.m_Action.m_Id
+      value: 9a8269d8-c6e8-4614-96a5-ac4a8c3bc242
+      objectReference: {fileID: 0}
     - target: {fileID: 1767192439, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: far clip plane
       value: 3000
@@ -15878,15 +15897,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.398
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.526
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.369
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15968,6 +15987,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 3d2e36aacd7dc084b96e0755f1af4137, type: 2}
+    - target: {fileID: 7981482882991702348, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_UIScrollAction.m_Action.m_Id
+      value: 7e0d711f-8066-4ae6-a6f6-7c2820bd5974
+      objectReference: {fileID: 0}
+    - target: {fileID: 7981482882991702348, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_IsTrackedAction.m_Action.m_Id
+      value: dc42a36f-165e-4762-8d06-e76dabc9fd1b
+      objectReference: {fileID: 0}
     - target: {fileID: 8453931120681351681, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_RenderPostProcessing
       value: 1
@@ -16136,6 +16163,11 @@ MonoBehaviour:
   m_UseGravity: 1
   m_EnableFly: 0
   m_EnableGrabMovement: 0
+--- !u!4 &1336582500 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 1336582480}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1348147447 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5283898765928290151, guid: 11d9c2d4a31153d48871dba786324550, type: 3}
@@ -23806,6 +23838,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864588339}
   m_CullTransparentMesh: 0
+--- !u!4 &1868169030 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4356456892009499901, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+  m_PrefabInstance: {fileID: 2609984114077390469}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1874036177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29514,7 +29551,10 @@ PrefabInstance:
     - {fileID: 6667257945311418147, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
     - {fileID: 5408638068356946006, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
     - {fileID: 8059801596075752100, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4356456892009499901, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1336582500}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
 --- !u!1 &2756534561872758012
@@ -31451,7 +31491,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 2609984114077390469}
-  - {fileID: 1336582480}
   - {fileID: 919317201}
   - {fileID: 1477099516}
   - {fileID: 623940451}

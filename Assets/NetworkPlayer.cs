@@ -11,6 +11,12 @@ public class NetworkPlayer : MonoBehaviour
     public Transform leftHand;
     public Transform rightHand;
     public PhotonView photonView;
+
+
+    public Transform XRHead { get; set; }
+    public Transform XRleftHand { get; set; }
+    public Transform XRrightHand { get; set; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,23 +26,30 @@ public class NetworkPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
- 
+    
+        if (photonView.IsMine)
+        {
+
             rightHand.gameObject.SetActive(true);
             leftHand.gameObject.SetActive(true);
             head.gameObject.SetActive(true);
-            MapPosition(head, XRNode.Head);
-            MapPosition(leftHand, XRNode.LeftHand);
-            MapPosition(rightHand, XRNode.RightHand);
+
+            MapPosition();
+        }
       
         
     }
 
-    private void MapPosition(Transform Target, XRNode node)
+    private void MapPosition()
     {
-        InputDevices.GetDeviceAtXRNode(node).TryGetFeatureValue(CommonUsages.devicePosition, out Vector3 position);
-        InputDevices.GetDeviceAtXRNode(node).TryGetFeatureValue(CommonUsages.deviceRotation, out Quaternion rotation);
 
-        Target.localRotation = rotation;
-        Target.localPosition = position;
+        head.position = XRHead.position;
+        head.rotation = XRHead.rotation;
+
+        leftHand.position = XRleftHand.position;
+        leftHand.rotation = XRleftHand.rotation;
+
+        rightHand.position = XRrightHand.position;
+        rightHand.rotation = XRrightHand.rotation;
     }
 }
