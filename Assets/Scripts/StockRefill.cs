@@ -5,10 +5,11 @@ using UnityEngine;
 public class StockRefill : MonoBehaviour
 {
     [SerializeField] GameObject Food;
+    [SerializeField] GameObject AttachPoint;
+    [SerializeField] ParticleSystem ParticleSystem;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -17,12 +18,9 @@ public class StockRefill : MonoBehaviour
         
     }
 
-    private void OnTriggerStay(Collider other)
+    public void Refill()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            GameObject newFood = Instantiate(Food);
-            other.GetComponent<SimulateRayCast>().SelectedObject = newFood;
-        }
+        GameObject newFood = Instantiate(Food, AttachPoint.transform);
+        ParticleSystem.Play(true);
     }
 }

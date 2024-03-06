@@ -34,7 +34,6 @@ public class SimulateRayCast : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.tag);
         if (other.CompareTag("Ingredients"))
         {
             SelectedObject = other.gameObject;
