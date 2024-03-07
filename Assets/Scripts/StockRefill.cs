@@ -22,6 +22,5 @@ public class StockRefill : MonoBehaviour
     {
         GameObject newFood = Instantiate(Food, AttachPoint.transform);
         ParticleSystem.SetActive(true);
-        ParticleSystem.GetComponent<ParticleSystem>().Play();
     }
 }

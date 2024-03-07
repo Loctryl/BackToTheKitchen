@@ -5197,6 +5197,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1988827753781087002, guid: 05236ead5dadb9942bd7642de789b256, type: 3}
+      propertyPath: clearBehavior
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988827753781087014, guid: 05236ead5dadb9942bd7642de789b256, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4009267964979586221, guid: 05236ead5dadb9942bd7642de789b256, type: 3}
       propertyPath: m_Name
       value: Tomato_Supplier
@@ -15236,6 +15244,14 @@ PrefabInstance:
     - target: {fileID: 6947604102996551011, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
       propertyPath: m_Name
       value: Complete XR Origin Set Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518377906091129637, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_CameraYOffset
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518377906091129637, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_RequestedTrackingOriginMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8669137971820048389, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
       propertyPath: m_InteractionLayers.m_Bits
