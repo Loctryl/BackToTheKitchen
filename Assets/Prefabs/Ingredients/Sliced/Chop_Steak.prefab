@@ -200,7 +200,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6006665075144634387}
@@ -463,7 +463,7 @@ MonoBehaviour:
   cookedMesh: {fileID: 2720608395318045412, guid: 0762aaaa42b1ad84a8119618a7456629, type: 3}
   trashMesh: {fileID: -4774374933590487384, guid: df70b2f878339124ab1b871f859245da, type: 3}
   particuleSystem: {fileID: 6006665075144634398}
-  elapsedTime: 3
+  elapsedTime: 120
   slider: {fileID: 7017459200128769573}
   sliderFill: {fileID: 3970629777605600830}
   player: {fileID: 0}

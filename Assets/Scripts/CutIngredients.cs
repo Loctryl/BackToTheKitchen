@@ -6,6 +6,7 @@ public class CutIngredients : MonoBehaviour
 {
     [SerializeField] private int hitCount = 5;
     [SerializeField] private GameObject slicedObj;
+    [SerializeField] private GameObject optionalSecondObj;
     [SerializeField] public int instantiateNumber = 1;
     // Start is called before the first frame update
     void Start()
@@ -27,8 +28,13 @@ public class CutIngredients : MonoBehaviour
             {
                 for (int i = 0; i < instantiateNumber; i++)
                 {
-                    GameObject lettuce = Instantiate(slicedObj, transform);
-                    lettuce.transform.parent = null;
+                    GameObject food = Instantiate(slicedObj, transform);
+                    food.transform.parent = null;
+                    if (optionalSecondObj != null)
+                    {
+                        GameObject food2 = Instantiate(optionalSecondObj, transform);
+                        food2.transform.parent = null;
+                    }
                 }
                 Destroy(gameObject);
             }

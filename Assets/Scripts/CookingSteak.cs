@@ -33,7 +33,7 @@ public class CookingSteak : MonoBehaviour
         slider.transform.LookAt(new Vector3 (player.transform.position.x, 0, player.transform.position.z));
         slider.value = elapsedTime;
         sliderFill.color = Color.Lerp(Color.red, Color.green, slider.value / maxElapsedTime);
-        if (!Cooking)
+        if (Cooking)
         {
             TimerCooking();
         }
