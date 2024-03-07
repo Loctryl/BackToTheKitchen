@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5620170781275801127}
   - component: {fileID: 5321500082474127040}
   - component: {fileID: 5984328385876993741}
+  - component: {fileID: 7510022246517144545}
   - component: {fileID: 7819110210762473233}
   - component: {fileID: 2003137914964055208}
-  - component: {fileID: 7314154352991939575}
   - component: {fileID: 3845906856149224511}
   m_Layer: 0
   m_Name: Onion
@@ -31,9 +31,9 @@ Transform:
   m_GameObject: {fileID: 3504195571212525156}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.48, y: 0, z: 10.08}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -87,6 +87,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &7510022246517144545
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3504195571212525156}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.431199
+  m_Center: {x: -0.000000014901161, y: 0.41986495, z: 0.000000029802322}
 --- !u!54 &7819110210762473233
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,7 +148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 7510022246517144545}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -262,27 +284,6 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!65 &7314154352991939575
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3504195571212525156}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.1045198, y: 0.8205186, z: 1.1334}
-  m_Center: {x: 0, y: 0.40009022, z: -0.051828653}
 --- !u!114 &3845906856149224511
 MonoBehaviour:
   m_ObjectHideFlags: 0

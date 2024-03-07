@@ -6,7 +6,7 @@ public class StockRefill : MonoBehaviour
 {
     [SerializeField] GameObject Food;
     [SerializeField] GameObject AttachPoint;
-    [SerializeField] ParticleSystem ParticleSystem;
+    [SerializeField] GameObject ParticleSystem;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +21,6 @@ public class StockRefill : MonoBehaviour
     public void Refill()
     {
         GameObject newFood = Instantiate(Food, AttachPoint.transform);
-        ParticleSystem.Play(true);
+        ParticleSystem.SetActive(true);
     }
 }
