@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ThrowIngredients : MonoBehaviour
 {
+
+    [SerializeField] private ParticleSystem _particleSystem;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,7 @@ public class ThrowIngredients : MonoBehaviour
         if (other.CompareTag("Ingredients"))
         {
             Destroy(other.gameObject);
+            _particleSystem.Play();
         }
     }
 }
