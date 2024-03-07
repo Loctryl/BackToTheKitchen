@@ -14897,9 +14897,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1029172486883312052, guid: 9b93adc6dd6615c4bae188bdf6142b7d, type: 3}
-  _cam: {fileID: 0}
-  _leftHand: {fileID: 0}
-  _rightHand: {fileID: 0}
+  _cam: {fileID: 722614472}
+  _leftHand: {fileID: 722614469}
+  _rightHand: {fileID: 722614466}
 --- !u!114 &2011074840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14913,7 +14913,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultRooms: []
-  RoomUI: {fileID: 0}
 --- !u!4 &2011074841
 Transform:
   m_ObjectHideFlags: 0
