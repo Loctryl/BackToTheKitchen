@@ -9,6 +9,10 @@ TagManager:
   - Destroyer
   - MiniWorldCamera
   - Water
+  - Ingredients
+  - Dishes
+  - StaticObj
+  - MovableObj
   layers:
   - Default
   - TransparentFX
