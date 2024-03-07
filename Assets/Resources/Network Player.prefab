@@ -581,7 +581,10 @@ PrefabInstance:
       value: hats
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8934777400606672865, guid: 7dae257355e91fe44ab98018466a251e, type: 3}
+    - {fileID: -8391222552659086748, guid: 7dae257355e91fe44ab98018466a251e, type: 3}
+    - {fileID: 65702495048144492, guid: 7dae257355e91fe44ab98018466a251e, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dae257355e91fe44ab98018466a251e, type: 3}

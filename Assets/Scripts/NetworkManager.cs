@@ -15,7 +15,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 {
     // Start is called before the first frame update
     public List<DefaultRoom> defaultRooms;
-    public GameObject RoomUI;
      public void ConnectedToServer()
     {
         PhotonNetwork.ConnectUsingSettings();
@@ -33,7 +32,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         base.OnJoinedLobby();
         Debug.Log("Joined lobby");
-        RoomUI.SetActive(true);
     }
     public void InitiallizeRoom(int defaultRoomIndex)
     {
