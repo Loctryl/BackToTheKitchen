@@ -23,10 +23,8 @@ public class CutIngredients : MonoBehaviour
     {
         if (collision.collider.CompareTag("Destroyer"))
         {
-            Debug.Log("bing");
             if (hitCount <= 0)
             {
-                Debug.Log("bong");
                 for (int i = 0; i < instantiateNumber; i++)
                 {
                     GameObject lettuce = Instantiate(slicedObj, transform);

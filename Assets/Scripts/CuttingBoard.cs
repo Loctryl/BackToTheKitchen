@@ -22,7 +22,6 @@ public class CuttingBoard : MonoBehaviour
     {
         if (other.CompareTag("Ingredients"))
         {
-            Debug.Log("oui");
             other.GetComponent<CutIngredients>().instantiateNumber = multiplicator;
         }
     }
