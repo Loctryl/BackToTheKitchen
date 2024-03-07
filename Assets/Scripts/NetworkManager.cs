@@ -4,15 +4,19 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
+[System.Serializable]
+public class DefaultRoom
+{
+    public string RoomName;
+    public int SceneIndex;
+    public int MaxPlayer;
+}
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
     // Start is called before the first frame update
-    void Start()
-    {
-        ConnectedToServer();
-    }
-
-    void ConnectedToServer()
+    public List<DefaultRoom> defaultRooms;
+    public GameObject RoomUI;
+     public void ConnectedToServer()
     {
         PhotonNetwork.ConnectUsingSettings();
         Debug.Log("Try connect to server");
@@ -22,13 +26,27 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         Debug.Log("Connected to server");
         base.OnConnectedToMaster();
+        PhotonNetwork.JoinLobby();
+
+    }
+    public override void OnJoinedLobby()
+    {
+        base.OnJoinedLobby();
+        Debug.Log("Joined lobby");
+        RoomUI.SetActive(true);
+    }
+    public void InitiallizeRoom(int defaultRoomIndex)
+    {
+        DefaultRoom roomSetting = defaultRooms[defaultRoomIndex];
+        PhotonNetwork.LoadLevel(roomSetting.SceneIndex);
+
         RoomOptions roomOptions = new RoomOptions();
-        roomOptions.MaxPlayers = 4;
+        roomOptions.MaxPlayers = (byte)roomSetting.MaxPlayer;
         roomOptions.IsVisible = true;
         roomOptions.IsOpen = true;
-        PhotonNetwork.JoinOrCreateRoom("Room 1", roomOptions, TypedLobby.Default);
+        PhotonNetwork.JoinOrCreateRoom(roomSetting.RoomName, roomOptions, TypedLobby.Default);
     }
-
+            
     public override void OnJoinedRoom()
     {
         Debug.Log("Joined room");
