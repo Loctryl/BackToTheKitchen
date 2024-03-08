@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class StockRefill : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class StockRefill : MonoBehaviour
 
     public void Refill()
     {
-        GameObject newFood = Instantiate(Food, AttachPoint.transform);
+        GameObject newFood = PhotonNetwork.Instantiate(Food.name, AttachPoint.transform.position, AttachPoint.transform.rotation);
         ParticleSystem.SetActive(true);
     }
 }

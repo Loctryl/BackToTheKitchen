@@ -14,8 +14,7 @@ public class CutIngredients : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        photonView = GetComponent<PhotonView>();
-        photonView.OwnershipTransfer = OwnershipOption.Takeover;
+        
     }
 
     // Update is called once per frame
