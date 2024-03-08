@@ -128,6 +128,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7495988068081885359, guid: ce7ee0b8b0fdfe54babb57c80103ff08, type: 3}
+      propertyPath: sceneViewId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4429989042155122095, guid: ce7ee0b8b0fdfe54babb57c80103ff08, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.935
@@ -185,6 +189,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4079744311047398198, guid: 0ee6f39237dc5e64d9a3cc61702207fd, type: 3}
+      propertyPath: sceneViewId
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6923517744393812999, guid: 0ee6f39237dc5e64d9a3cc61702207fd, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -451,39 +459,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3058085061137390989, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1204846200}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
---- !u!1 &1204846199 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3058085061137390989, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
-  m_PrefabInstance: {fileID: 1204846198}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1204846200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1204846199}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6df71824f341bc4897680bb8beb4090, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MaxRaycastDistance: 10
-  m_ReticlePrefab: {fileID: 230010714376457507, guid: 722c8a668b7904041bced9198d7df62c, type: 3}
-  m_PrefabScalingFactor: 1
-  m_UndoDistanceScaling: 1
-  m_AlignPrefabWithSurfaceNormal: 0
-  m_EndpointSmoothingTime: 0.02
-  m_DrawWhileSelecting: 0
-  m_DrawOnNoHit: 1
-  m_RaycastMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!1001 &412015512673611957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -492,6 +469,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 957836663498129154, guid: 461e379f49d601e449d0b1a2cad30f15, type: 3}
+      propertyPath: sceneViewId
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1039222452163747824, guid: 461e379f49d601e449d0b1a2cad30f15, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.5879014
@@ -553,6 +534,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Onion
       objectReference: {fileID: 0}
+    - target: {fileID: 4166634002424919458, guid: 58f3d1cc5b9a5074cb49acfc00e68f4d, type: 3}
+      propertyPath: sceneViewId
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5620170781275801127, guid: 58f3d1cc5b9a5074cb49acfc00e68f4d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.48
@@ -609,6 +594,10 @@ PrefabInstance:
     - target: {fileID: 1789673220105316126, guid: 11c4eb3a0e1fbb14a9a71ea87cb7b704, type: 3}
       propertyPath: m_Name
       value: Tomato
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479604199658922902, guid: 11c4eb3a0e1fbb14a9a71ea87cb7b704, type: 3}
+      propertyPath: sceneViewId
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4592864222608274306, guid: 11c4eb3a0e1fbb14a9a71ea87cb7b704, type: 3}
       propertyPath: m_LocalPosition.x
@@ -763,6 +752,10 @@ PrefabInstance:
     - target: {fileID: 4037931741202119873, guid: 923ce9a522300fe42930671310225e2b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7312623983128235864, guid: 923ce9a522300fe42930671310225e2b, type: 3}
+      propertyPath: sceneViewId
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
