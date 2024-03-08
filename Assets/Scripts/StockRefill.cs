@@ -21,8 +21,7 @@ public class StockRefill : MonoBehaviour
 
     public void Refill()
     {
-
-        Food = PhotonNetwork.Instantiate(Food.name, AttachPoint.transform.position, AttachPoint.transform.rotation);
+        GameObject newFood = PhotonNetwork.Instantiate(Food.name, AttachPoint.transform.position, AttachPoint.transform.rotation);
         ParticleSystem.SetActive(true);
     }
 }
