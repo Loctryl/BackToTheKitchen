@@ -31,11 +31,11 @@ public class CutIngredients : MonoBehaviour
             {
                 for (int i = 0; i < instantiateNumber; i++)
                 {
-                    GameObject food = Instantiate(slicedObj, transform);
+                    GameObject food = PhotonNetwork.Instantiate(slicedObj.name, transform.position, transform.rotation);
                     food.transform.parent = null;
                     if (optionalSecondObj != null)
                     {
-                        GameObject food2 = Instantiate(optionalSecondObj, transform);
+                        GameObject food2 = PhotonNetwork.Instantiate(optionalSecondObj.name, transform.position, transform.rotation);
                         food2.transform.parent = null;
                     }
                 }
