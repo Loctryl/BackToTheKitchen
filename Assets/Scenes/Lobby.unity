@@ -1910,18 +1910,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 235169118747228612, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
-      propertyPath: m_RayInteractor
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1123316482766697967, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
-      propertyPath: m_RayInteractor
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2135330289273471770, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
-      propertyPath: 'm_StartingGroupMembers.Array.data[2]'
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4356456892009499901, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.398
@@ -1962,9 +1950,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5483531108837238296, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
-      propertyPath: 'm_StartingGroupMembers.Array.data[2]'
-      value: 
+    - target: {fileID: 5861166349218024713, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_CameraYOffset
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 6947604102996551011, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
       propertyPath: m_Name
