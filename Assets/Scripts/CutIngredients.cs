@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class CutIngredients : MonoBehaviour
 {
@@ -8,10 +9,13 @@ public class CutIngredients : MonoBehaviour
     [SerializeField] private GameObject slicedObj;
     [SerializeField] private GameObject optionalSecondObj;
     [SerializeField] public int instantiateNumber = 1;
+
+    private PhotonView photonView;
     // Start is called before the first frame update
     void Start()
     {
-        
+        photonView = GetComponent<PhotonView>();
+        photonView.OwnershipTransfer = OwnershipOption.Takeover;
     }
 
     // Update is called once per frame
