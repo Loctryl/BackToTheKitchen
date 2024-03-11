@@ -128,6 +128,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7509054161002217380, guid: 5446ef5dc958b8a4696b2ea78d37c607, type: 3}
+      propertyPath: sceneViewId
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6002929182905440636, guid: 5446ef5dc958b8a4696b2ea78d37c607, type: 3}
       propertyPath: m_Name
       value: Dish
@@ -324,34 +328,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4823ff4022dd4ac794774dfaa7d3247d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &282113984 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3058085061137390989, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
-  m_PrefabInstance: {fileID: 1641571967}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &282113986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 282113984}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6df71824f341bc4897680bb8beb4090, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MaxRaycastDistance: 10
-  m_ReticlePrefab: {fileID: 230010714376457507, guid: 722c8a668b7904041bced9198d7df62c, type: 3}
-  m_PrefabScalingFactor: 1
-  m_UndoDistanceScaling: 1
-  m_AlignPrefabWithSurfaceNormal: 0
-  m_EndpointSmoothingTime: 0.02
-  m_DrawWhileSelecting: 0
-  m_DrawOnNoHit: 1
-  m_RaycastMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &302910385 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4329008592085135078, guid: b4eef0dd5290ce64980045cfc8e9c67d, type: 3}
@@ -387,6 +363,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1358906384246257895, guid: b4eef0dd5290ce64980045cfc8e9c67d, type: 3}
+      propertyPath: sceneViewId
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2628615281656710854, guid: b4eef0dd5290ce64980045cfc8e9c67d, type: 3}
       propertyPath: m_Name
       value: Plate Dirty
@@ -702,6 +682,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -621965578688108096, guid: c423d7b1412b01f4dbe74bd5383e2cca, type: 3}
+      propertyPath: sceneViewId
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4639318122584877015, guid: c423d7b1412b01f4dbe74bd5383e2cca, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -829,6 +813,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tomato
       objectReference: {fileID: 0}
+    - target: {fileID: 5616507949410500145, guid: 48de6c526714a7e4a8465ecbad86d6cd, type: 3}
+      propertyPath: sceneViewId
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8310583863367336593, guid: 48de6c526714a7e4a8465ecbad86d6cd, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -938,6 +926,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3486640399658136637, guid: 21d0943618ab86f4ea82f93ff3448feb, type: 3}
+      propertyPath: sceneViewId
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8670920203144514471, guid: 21d0943618ab86f4ea82f93ff3448feb, type: 3}
       propertyPath: m_Name
       value: BreadBottom
@@ -1010,6 +1002,10 @@ PrefabInstance:
     - target: {fileID: 5644281977247937565, guid: ac0a5c02a46d22c4683c55a8db620731, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563371048961466716, guid: ac0a5c02a46d22c4683c55a8db620731, type: 3}
+      propertyPath: sceneViewId
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8083942040284150545, guid: ac0a5c02a46d22c4683c55a8db620731, type: 3}
       propertyPath: m_Name
@@ -1146,6 +1142,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -99794218944962996, guid: 247e631130c547248bf4cc7282bd1606, type: 3}
+      propertyPath: sceneViewId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 438298205333600937, guid: 247e631130c547248bf4cc7282bd1606, type: 3}
       propertyPath: m_Name
       value: BreadTop
@@ -1459,10 +1459,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3058085061137390989, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 282113986}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
 --- !u!1001 &1837510526
 PrefabInstance:
@@ -1472,6 +1469,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 272830510969088793, guid: 394d4cbe89196ce47a3072220530853a, type: 3}
+      propertyPath: sceneViewId
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2321495542576947267, guid: 394d4cbe89196ce47a3072220530853a, type: 3}
       propertyPath: m_Name
       value: Lettuce
@@ -1574,6 +1575,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4079744311047398198, guid: 0ee6f39237dc5e64d9a3cc61702207fd, type: 3}
+      propertyPath: sceneViewId
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 457378447110153549, guid: 0ee6f39237dc5e64d9a3cc61702207fd, type: 3}
       propertyPath: slider
       value: 
