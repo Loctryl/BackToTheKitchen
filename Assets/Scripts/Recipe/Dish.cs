@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Dish : MonoBehaviour
 {
-    private List<int> _ingredients;
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +17,18 @@ public class Dish : MonoBehaviour
         
     }
 
-    public List<int> GetIngredients() { return _ingredients; }
+    public List<int> GetIngredients()
+    {
+        List<int> ingredients = new List<int>();
+        Sockatable current = gameObject.GetComponent<Sockatable>();
+        
+        while (current)
+        {
+            Debug.Log(current);
+            ingredients.Add(current.objectIndex);
+            current = current.socketedObj;
+        }
+        
+        return ingredients;
+    }
 }
