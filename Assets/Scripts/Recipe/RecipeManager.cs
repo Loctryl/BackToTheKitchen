@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.XR.Interaction.Toolkit;
+using Photon.Pun;
 
 public class RecipeManager : MonoBehaviour
 {
@@ -30,7 +31,9 @@ public class RecipeManager : MonoBehaviour
 
     void CreateRecipe()
     {
-        GameObject recipe = Instantiate(recipePrefab, recipeDisplay.transform);
+        //GameObject recipe = Instantiate(recipePrefab, recipeDisplay.transform);
+        GameObject recipe = PhotonNetwork.Instantiate(recipePrefab.name, recipeDisplay.transform.position, Quaternion.identity);
+        recipe.transform.parent = recipeDisplay.transform;
         recipe.GetComponent<Recipe>().SetRecipe(ingredients);
         _recipes.Add(recipe.GetComponent<Recipe>());
     }
