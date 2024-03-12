@@ -1,59 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class CookingSteak : MonoBehaviour
 {
-    [SerializeField] private MeshFilter filter;
-    [SerializeField] private Mesh cookedMesh;
-    [SerializeField] private Mesh trashMesh;
-    [SerializeField] private GameObject particuleSystem;
-    [SerializeField] private float elapsedTime = 120;
-    [SerializeField] private Slider slider;
-    [SerializeField] private Image sliderFill;
-    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject socket;
+    [SerializeField] private GameObject particle;
 
-    private bool Cooking = false;
-    private float maxElapsedTime;
-
-
+    [SerializeField] private bool onStove = false;
     // Start is called before the first frame update
     void Start()
     {
-        maxElapsedTime = elapsedTime;
-        player = GameObject.FindGameObjectWithTag("Player");
-        slider.maxValue = elapsedTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        slider.transform.LookAt(new Vector3 (player.transform.position.x, 0, player.transform.position.z));
-        slider.value = elapsedTime;
-        sliderFill.color = Color.Lerp(Color.red, Color.green, slider.value / maxElapsedTime);
-        if (Cooking)
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("RawSteak") && onStove)
         {
-            TimerCooking();
+            socket.SetActive(true);
+            particle.SetActive(true);
         }
     }
 
-    private void TimerCooking()
+    private void OnTriggerExit(Collider other)
     {
-        if (elapsedTime > 0)
+        if (other.CompareTag("RawSteak"))
         {
-            elapsedTime -= Time.deltaTime;
+            socket.SetActive(false);
+            particle.SetActive(false);
         }
-        if (elapsedTime < maxElapsedTime / 2)
-        {
-            filter.mesh = cookedMesh;
-        }
-        if (elapsedTime < 0)
-        {
-            particuleSystem.SetActive(true);
-            filter.mesh = trashMesh;
-            Cooking = false;
-        }
+    }
+
+    public void SetOnStoveTrue()
+    {
+        onStove = true;
+    }
+    public void SetOnStoveFalse()
+    {
+        onStove = false;
     }
 }

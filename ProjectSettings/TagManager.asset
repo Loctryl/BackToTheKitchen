@@ -13,6 +13,7 @@ TagManager:
   - Dishes
   - StaticObj
   - MovableObj
+  - RawSteak
   layers:
   - Default
   - TransparentFX
