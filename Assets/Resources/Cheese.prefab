@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitCount: 5
-  slicedObj: {fileID: 689017844241341700, guid: 48de6c526714a7e4a8465ecbad86d6cd, type: 3}
+  slicedObj: {fileID: 8859528538581331235, guid: c423d7b1412b01f4dbe74bd5383e2cca, type: 3}
   optionalSecondObj: {fileID: 0}
   instantiateNumber: 1
 --- !u!114 &-116557178935081354
