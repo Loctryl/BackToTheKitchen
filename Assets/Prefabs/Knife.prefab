@@ -112,7 +112,7 @@ MonoBehaviour:
         animationStateEndValue: {r: 0, g: 0, b: 0, a: 0}
       m_ColorBlendMode: 0
       m_BlendAmount: 1
-    m_Variable: {fileID: 11400000, guid: 4b1e63e72a9ae234093697f61c2c70b8, type: 2}
+    m_Variable: {fileID: 11400000, guid: f2659234e7d26c2419cec56b407a34f0, type: 2}
   m_ValueUpdated:
     m_PersistentCalls:
       m_Calls: []
