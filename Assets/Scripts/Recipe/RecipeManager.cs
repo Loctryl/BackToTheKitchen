@@ -1,13 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.XR.Interaction.Toolkit;
+using Photon.Pun;
 
 public class RecipeManager : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> _ingredients;
-    [SerializeField] private GameObject _recipePrefab;
+    [SerializeField] private List<GameObject> ingredients;
+    [SerializeField] private GameObject recipePrefab;
+    [SerializeField] private GameObject recipeDisplay;
     
     private List<Recipe> _recipes;
+
+    [HideInInspector] public int score;
     
     // Start is called before the first frame update
     void Start()
@@ -25,23 +31,31 @@ public class RecipeManager : MonoBehaviour
 
     void CreateRecipe()
     {
-        GameObject recipe = Instantiate(_recipePrefab);
-        recipe.GetComponent<Recipe>().SetRecipe(_ingredients);
+        //GameObject recipe = Instantiate(recipePrefab, recipeDisplay.transform);
+        GameObject recipe = PhotonNetwork.Instantiate(recipePrefab.name, recipeDisplay.transform.position, Quaternion.identity);
+        recipe.transform.parent = recipeDisplay.transform;
+        recipe.GetComponent<Recipe>().SetRecipe(ingredients);
         _recipes.Add(recipe.GetComponent<Recipe>());
     }
 
     public void ServeDish(GameObject dish)
     {
-        bool reciped = false;
         int recipeIndex = 0;
+        List<int> meal = dish.GetComponent<Dish>().GetIngredients();
+        Debug.Log("Serve me");
         
-        while (!reciped && recipeIndex <= _recipes.Count)
+        while (recipeIndex <= _recipes.Count)
         {
-            if (dish.GetComponent<Dish>().GetIngredients() == _recipes[recipeIndex].GetRecipeIngredients())
+            if (meal == _recipes[recipeIndex].GetRecipeIngredients())
             {
-                reciped = true;
+                Debug.Log("Feat recipe");
+                Destroy(_recipes[recipeIndex].gameObject);
+                _recipes.Remove(_recipes[recipeIndex]);
+                score += 50;
+                return;
             }
             recipeIndex++;
         }
+        score -= 50;
     }
 }

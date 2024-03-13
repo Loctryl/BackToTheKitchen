@@ -23,10 +23,12 @@ public class SocketEvents : MonoBehaviour
 	void UsedSocket(SelectEnterEventArgs args)
 	{
 		args.interactableObject.transform.GetComponent<ISocketable>().SocketOn();
+		transform.parent.GetComponent<Sockatable>().socketedObj = args.interactableObject.transform.GetComponent<Sockatable>();
 	}
 	
 	void UnUsedSocket(SelectExitEventArgs args)
 	{
 		args.interactableObject.transform.GetComponent<ISocketable>().SocketOff();
+		transform.parent.GetComponent<Sockatable>().socketedObj = null;
 	}
 }

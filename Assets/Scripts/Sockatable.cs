@@ -13,6 +13,8 @@ public class Sockatable : MonoBehaviour, ISocketable
 {
     [SerializeField] private UnityEvent socketOn;
     [SerializeField] private UnityEvent socketOff;
+    [SerializeField] public int objectIndex;
+    [HideInInspector] public Sockatable socketedObj;
     
     public void SocketOn()
     {

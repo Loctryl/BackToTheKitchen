@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5620170781275801127}
   - component: {fileID: 5321500082474127040}
   - component: {fileID: 5984328385876993741}
-  - component: {fileID: 7510022246517144545}
+  - component: {fileID: 1227155324963350638}
   - component: {fileID: 7819110210762473233}
   - component: {fileID: 3845906856149224511}
   - component: {fileID: -8545872485934647380}
@@ -90,8 +90,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &7510022246517144545
-SphereCollider:
+--- !u!64 &1227155324963350638
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -108,9 +108,10 @@ SphereCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.431199
-  m_Center: {x: -0.000000014901161, y: 0.41986495, z: 0.000000029802322}
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3868198897737585946, guid: 45da1a665657f0e49a70d800dc49d958, type: 3}
 --- !u!54 &7819110210762473233
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -352,7 +353,7 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 0
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
