@@ -14,6 +14,7 @@ public class SteakTimer : MonoBehaviour
     [SerializeField] private Slider slider;
     [SerializeField] private Image sliderFill;
     [SerializeField] private GameObject player;
+    [SerializeField] private XRGrabNetworkInteractable XRGrabNetworkInteractable;
 
     private bool Cooking = false;
     private float maxElapsedTime;
@@ -25,6 +26,7 @@ public class SteakTimer : MonoBehaviour
         maxElapsedTime = elapsedTime;
         player = GameObject.FindGameObjectWithTag("Player");
         slider.maxValue = elapsedTime;
+        XRGrabNetworkInteractable = GetComponent<XRGrabNetworkInteractable>();
     }
 
     // Update is called once per frame
@@ -48,18 +50,28 @@ public class SteakTimer : MonoBehaviour
         if (elapsedTime < maxElapsedTime / 2)
         {
             filter.mesh = cookedMesh;
+            XRGrabNetworkInteractable.interactionLayers = InteractionLayerMask.NameToLayer("Ingredients");
+
         }
         if (elapsedTime < 0)
         {
             particuleSystem.SetActive(true);
             filter.mesh = trashMesh;
             Cooking = false;
-            tag = "Ingredients";
+            XRGrabNetworkInteractable.interactionLayers = InteractionLayerMask.NameToLayer("RawIngredients");
         }
     }
 
     public void SetCooking()
     {
         Cooking = true;
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.collider.CompareTag("Flame"))
+        {
+            Cooking = false;
+        }
     }
 }

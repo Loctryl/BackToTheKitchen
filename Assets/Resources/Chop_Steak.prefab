@@ -336,6 +336,7 @@ MonoBehaviour:
   slider: {fileID: 7017459200128769573}
   sliderFill: {fileID: 3970629777605600830}
   player: {fileID: 0}
+  XRGrabNetworkInteractable: {fileID: 0}
 --- !u!114 &-3074166642211923229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,11 +721,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2858271183769196608, guid: 1f272fe2869d2ad44b24732eb042def4, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2858271183769196608, guid: 1f272fe2869d2ad44b24732eb042def4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4516802980253009424, guid: 1f272fe2869d2ad44b24732eb042def4, type: 3}
       propertyPath: m_Pivot.x
@@ -813,6 +814,10 @@ PrefabInstance:
     - target: {fileID: 9212220784760342575, guid: 1f272fe2869d2ad44b24732eb042def4, type: 3}
       propertyPath: m_Name
       value: UI Timer
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212220784760342575, guid: 1f272fe2869d2ad44b24732eb042def4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
