@@ -27,7 +27,7 @@ public class ThrowIngredients : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Ingredients"))
+        if (other.CompareTag("Ingredients") || other.CompareTag("RawSteak") || other.CompareTag("Flame"))
         {
             Destroy(other.gameObject);
             particuleSystem.SetActive(true);
