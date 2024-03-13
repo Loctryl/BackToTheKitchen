@@ -12,6 +12,9 @@ public class RecipeManager : MonoBehaviour
     [SerializeField] private GameObject recipeDisplay;
     
     private List<Recipe> _recipes;
+    [SerializeField] private float timeBetweenRecipes = 20.0f;
+    private float _elapsedTime;
+
 
     [HideInInspector] public int score;
     
@@ -19,21 +22,26 @@ public class RecipeManager : MonoBehaviour
     void Start()
     {
         _recipes = new List<Recipe>();
-        
-        CreateRecipe();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        _elapsedTime += Time.deltaTime;
+        if (_elapsedTime >= timeBetweenRecipes)
+        {
+            _elapsedTime = 0;
+            CreateRecipe();
+        }
     }
 
     void CreateRecipe()
     {
         //GameObject recipe = Instantiate(recipePrefab, recipeDisplay.transform);
         GameObject recipe = PhotonNetwork.Instantiate(recipePrefab.name, recipeDisplay.transform.position, Quaternion.identity);
-        recipe.transform.parent = recipeDisplay.transform;
+        recipe.transform.SetParent(recipeDisplay.transform);
+        recipe.transform.localRotation = Quaternion.identity;
+        recipe.transform.localScale = Vector3.one;
         recipe.GetComponent<Recipe>().SetRecipe(ingredients);
         _recipes.Add(recipe.GetComponent<Recipe>());
     }
