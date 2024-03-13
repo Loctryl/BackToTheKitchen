@@ -50,7 +50,7 @@ public class SteakTimer : MonoBehaviour
         if (elapsedTime < maxElapsedTime / 2)
         {
             filter.mesh = cookedMesh;
-            XRGrabNetworkInteractable.interactionLayers = InteractionLayerMask.NameToLayer("Ingredients");
+            XRGrabNetworkInteractable.interactionLayers = InteractionLayerMask.GetMask("Ingredients");
 
         }
         if (elapsedTime < 0)
@@ -58,7 +58,7 @@ public class SteakTimer : MonoBehaviour
             particuleSystem.SetActive(true);
             filter.mesh = trashMesh;
             Cooking = false;
-            XRGrabNetworkInteractable.interactionLayers = InteractionLayerMask.NameToLayer("Nothing");
+            XRGrabNetworkInteractable.interactionLayers = InteractionLayerMask.GetMask("Nothing");
         }
     }
 
