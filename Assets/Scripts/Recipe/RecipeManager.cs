@@ -12,7 +12,7 @@ public class RecipeManager : MonoBehaviour
     [SerializeField] private GameObject recipeDisplay;
     
     private List<Recipe> _recipes;
-    [SerializeField] private float timeBetweenRecipes = 20.0f;
+    [SerializeField] private float timeBetweenRecipes = 60.0f;
     private float _elapsedTime;
 
 
@@ -28,7 +28,7 @@ public class RecipeManager : MonoBehaviour
     void Update()
     {
         _elapsedTime += Time.deltaTime;
-        if (_elapsedTime >= timeBetweenRecipes)
+        if (_elapsedTime >= timeBetweenRecipes && _recipes.Count < 4)
         {
             _elapsedTime = 0;
             CreateRecipe();
