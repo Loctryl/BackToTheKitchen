@@ -368,7 +368,7 @@ MonoBehaviour:
   cookedMesh: {fileID: 2720608395318045412, guid: 0762aaaa42b1ad84a8119618a7456629, type: 3}
   trashMesh: {fileID: -4774374933590487384, guid: df70b2f878339124ab1b871f859245da, type: 3}
   particuleSystem: {fileID: 6006665075144634398}
-  elapsedTime: 120
+  elapsedTime: 10
   slider: {fileID: 7017459200128769573}
   sliderFill: {fileID: 3970629777605600830}
   player: {fileID: 0}
