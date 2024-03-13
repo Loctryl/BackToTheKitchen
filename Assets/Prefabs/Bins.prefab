@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particuleSystem: {fileID: 1934976157486820543}
+  boxCollider: {fileID: -7734849645856790712}
 --- !u!1001 &4260030436774335411
 PrefabInstance:
   m_ObjectHideFlags: 0
