@@ -36,8 +36,9 @@ public class Recipe : MonoBehaviour
 
     private void CreateImageComp(int id)
     {
-        GameObject nF = PhotonNetwork.Instantiate(image.name, Vector3.zero, Quaternion.identity);
-        nF.transform.parent = compositionDisplay.transform;
+        GameObject nF = PhotonNetwork.Instantiate(image.name, compositionDisplay.transform.position, Quaternion.identity);
+        nF.transform.SetParent(compositionDisplay.transform);
+        nF.transform.localScale = new Vector3(0.7f, 0.7f,0.7f);
         nF.GetComponent<Image>().sprite = composition[id];
     }
 
