@@ -724,6 +724,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   socketInteractor: {fileID: 5580229885849375579}
+  socketUsed:
+    m_PersistentCalls:
+      m_Calls: []
+  socketFree:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &689181653988052239
 PrefabInstance:
   m_ObjectHideFlags: 0
