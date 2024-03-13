@@ -169,6 +169,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   socketInteractor: {fileID: 2422300278453826061}
+  socketUsed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2055965958850909760}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  socketFree:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2055965958850909760}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &5461357046700783104
 GameObject:
   m_ObjectHideFlags: 0
