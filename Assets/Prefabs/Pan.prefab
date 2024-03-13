@@ -52,7 +52,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4
+    m_Bits: 6
   m_AttachTransform: {fileID: 5208421837707060963}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -66,7 +66,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3181827192204334944}
+        m_TargetAssemblyTypeName: CookingSteak, Assembly-CSharp
+        m_MethodName: SelectAttachPoint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -169,6 +181,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ControllingInteractor: {fileID: 5547885830895495449}
+--- !u!1 &3964188486460652295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 60331959590964334}
+  m_Layer: 0
+  m_Name: AttachPointStove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &60331959590964334
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3964188486460652295}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.000005990267, y: 1, z: -5.684342e-13, w: 0.000003054738}
+  m_LocalPosition: {x: 0, y: 0.092, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4429989042155122095}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: -359.999}
 --- !u!1 &4559989313637027686
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9216415090246738800}
   m_Layer: 0
-  m_Name: AttachPoint
+  m_Name: AttachPointPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -309,6 +352,7 @@ Transform:
   - {fileID: 6016940608549770017}
   - {fileID: 2459735979081438012}
   - {fileID: 9216415090246738800}
+  - {fileID: 60331959590964334}
   - {fileID: 3218787879868941893}
   - {fileID: 8713907943325654643}
   m_Father: {fileID: 0}
@@ -504,7 +548,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_AttachTransform: {fileID: 9216415090246738800}
-  m_SecondaryAttachTransform: {fileID: 0}
+  m_SecondaryAttachTransform: {fileID: 60331959590964334}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
