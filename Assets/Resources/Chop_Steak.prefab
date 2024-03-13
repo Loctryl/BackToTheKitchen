@@ -315,7 +315,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   objectIndex: 6
-  hasSocketOn: 0
+  socketedObj: {fileID: 0}
 --- !u!114 &457378447110153549
 MonoBehaviour:
   m_ObjectHideFlags: 0
