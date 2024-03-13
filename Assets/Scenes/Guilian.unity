@@ -1248,6 +1248,10 @@ PrefabInstance:
       propertyPath: recipeDisplay
       value: 
       objectReference: {fileID: 1196716209023814246}
+    - target: {fileID: 3453576309827295031, guid: 0e50499484a6be04398c4f0b870f3530, type: 3}
+      propertyPath: timeBetweenRecipes
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3657217275351691417, guid: 0e50499484a6be04398c4f0b870f3530, type: 3}
       propertyPath: m_Name
       value: RecipeManager
