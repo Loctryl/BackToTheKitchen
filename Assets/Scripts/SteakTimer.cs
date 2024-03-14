@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class SteakTimer : MonoBehaviour
+public class SteakTimer : MonoBehaviourPunCallbacks
 {
     [SerializeField] private MeshFilter filter;
     [SerializeField] private Mesh cookedMesh;
@@ -16,6 +17,9 @@ public class SteakTimer : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private XRGrabNetworkInteractable XRGrabNetworkInteractable;
     [SerializeField] private GameObject UItimer;
+    [SerializeField] private AudioSource CookingSound;
+    
+    private PhotonView photonView;
 
     private bool Cooking = false;
     private float maxElapsedTime;
@@ -24,6 +28,7 @@ public class SteakTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        photonView = GetComponent<PhotonView>();
         maxElapsedTime = elapsedTime;
         player = GameObject.FindGameObjectWithTag("Player");
         slider.maxValue = elapsedTime;
@@ -66,11 +71,25 @@ public class SteakTimer : MonoBehaviour
     public void SetCookingTrue()
     {
         Cooking = true;
+        photonView.RPC("PlayAudio", RpcTarget.All);
     }
 
     public void SetCookingFalse()
     {
         Cooking = false;
+        photonView.RPC("StopAudio", RpcTarget.All);
+    }
+    
+    [PunRPC]
+    void PlayAudio()
+    {
+        CookingSound.Play();
+    }
+    
+    [PunRPC]
+    void StopAudio()
+    {
+        CookingSound.Stop();
     }
 
     private void OnCollisionEnter(Collision collision)
