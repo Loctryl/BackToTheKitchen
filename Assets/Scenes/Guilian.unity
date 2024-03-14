@@ -16967,6 +16967,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Complete XR Origin Set Up
       objectReference: {fileID: 0}
+    - target: {fileID: 1455528634893001065, guid: 98b28f9890310e44997a3d00cdc32029, type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: 3621981467535291324, guid: 6c2509c76b281144cb0099fc45f17a09, type: 3}
+    - target: {fileID: 4823392567166327330, guid: 98b28f9890310e44997a3d00cdc32029, type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: 3621981467535291324, guid: ddc38db09f9124241b4b4e9b2b9831eb, type: 3}
+    - target: {fileID: 5892361956224055865, guid: 98b28f9890310e44997a3d00cdc32029, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6018547637984666342, guid: 98b28f9890310e44997a3d00cdc32029, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.396
@@ -17005,6 +17017,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6018547637984666342, guid: 98b28f9890310e44997a3d00cdc32029, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033627812404146780, guid: 98b28f9890310e44997a3d00cdc32029, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233849117221860734, guid: 98b28f9890310e44997a3d00cdc32029, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146312728309732757, guid: 98b28f9890310e44997a3d00cdc32029, type: 3}
+      propertyPath: m_MinHeight
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773200801778200618, guid: 98b28f9890310e44997a3d00cdc32029, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
