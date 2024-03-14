@@ -46,10 +46,4 @@ public class CookingSteak : MonoBehaviour
     {
         onStove = false;
     }
-
-    public void SelectAttachPoint(SelectEnterEventArgs args)
-    {
-        Debug.Log(args.interactableObject);
-        //if (args.interactableObject == )
-    }
 }

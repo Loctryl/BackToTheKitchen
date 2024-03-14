@@ -39,11 +39,11 @@ public class Bar : MonoBehaviour
         _isDishOnBar = true;
         _dish = dish.interactableObject.transform.gameObject;
     }
-
-    // on socket enter
-    public void DishExitBar()
+    
+    public void DishExitBar(SelectExitEventArgs dish)
     {
         _isDishOnBar = false;
         _timeOnBar = 0;
+        _dish = null;
     }
 }

@@ -36,7 +36,7 @@ public class SteakTimer : MonoBehaviour
         slider.transform.LookAt(new Vector3 (player.transform.position.x, 0, player.transform.position.z));
         slider.value = elapsedTime;
         sliderFill.color = Color.Lerp(Color.red, Color.green, slider.value / maxElapsedTime);
-        if (!Cooking)
+        if (Cooking)
         {
             TimerCooking();
         }
@@ -51,16 +51,16 @@ public class SteakTimer : MonoBehaviour
         if (elapsedTime < maxElapsedTime / 2)
         {
             filter.mesh = cookedMesh;
-            XRGrabNetworkInteractable.interactionLayerMask = InteractionLayerMask.NameToLayer("Ingredients");
+            XRGrabNetworkInteractable.interactionLayers = InteractionLayerMask.GetMask("Ingredients");
 
         }
-       /* if (elapsedTime < 0)
+        if (elapsedTime < 0)
         {
             particuleSystem.SetActive(true);
             filter.mesh = trashMesh;
             Cooking = false;
-            XRGrabNetworkInteractable.interactionLayers = InteractionLayerMask.NameToLayer("Nothing");
-        }*/
+            XRGrabNetworkInteractable.interactionLayers = InteractionLayerMask.GetMask("Nothing");
+        }
     }
 
     public void SetCookingTrue()
