@@ -59,7 +59,7 @@ public class SteakTimer : MonoBehaviour
             particuleSystem.SetActive(true);
             filter.mesh = trashMesh;
             Cooking = false;
-            XRGrabNetworkInteractable.interactionLayers = InteractionLayerMask.GetMask("Nothing");
+            XRGrabNetworkInteractable.interactionLayers = InteractionLayerMask.GetMask("RawIngredients");
         }
     }
 
@@ -73,19 +73,18 @@ public class SteakTimer : MonoBehaviour
         Cooking = false;
     }
 
-    public void HoverEnter (HoverEnterEventArgs e)
+    private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("entered");
-        if (e.interactorObject.transform.CompareTag("Flame")){
+        if (collision.collider.CompareTag("Flame"))
+        {
             SetCookingTrue();
             UItimer.SetActive(true);
         }
     }
 
-    public void HoverExited(HoverExitEventArgs e)
+    private void OnCollisionExit(Collision collision)
     {
-        Debug.Log("exited");
-        if (e.interactorObject.transform.CompareTag("Flame"))
+        if (collision.collider.CompareTag("Flame"))
         {
             SetCookingFalse();
             UItimer.SetActive(false);
