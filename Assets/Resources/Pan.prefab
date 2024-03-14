@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: -2341951504119042888}
   - component: {fileID: 2372561160919716139}
   - component: {fileID: 1164823241958655401}
+  - component: {fileID: 7145145484324396106}
   m_Layer: 0
   m_Name: Pan
   m_TagString: Flame
@@ -65,7 +66,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.25, z: 0.5}
+  m_LocalScale: {x: 0.6, y: 0.3, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2459735979081438012}
@@ -384,6 +385,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particle: {fileID: 8713907943326007891}
   onStove: 0
+--- !u!114 &7145145484324396106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5725297706348983758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b33359a1828f26543ac07ecf8cef1df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  socketOn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1164823241958655401}
+        m_TargetAssemblyTypeName: CookingSteak, Assembly-CSharp
+        m_MethodName: SetOnStoveTrue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  socketOff:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1164823241958655401}
+        m_TargetAssemblyTypeName: CookingSteak, Assembly-CSharp
+        m_MethodName: SetOnStoveFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  objectIndex: 0
+  socketedObj: {fileID: 0}
 --- !u!1 &6532164167370743393
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,6 +534,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CFXR Smoke Source 3D
       objectReference: {fileID: 0}
+    - target: {fileID: 8656522925564163052, guid: e509867be4f82f246a95eca1ee5a2d61, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -551,6 +600,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 17d037eb23b12c8438db61210203ff5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 17d037eb23b12c8438db61210203ff5a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 17d037eb23b12c8438db61210203ff5a, type: 3}
       propertyPath: m_Name
