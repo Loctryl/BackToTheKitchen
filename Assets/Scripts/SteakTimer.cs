@@ -15,6 +15,7 @@ public class SteakTimer : MonoBehaviour
     [SerializeField] private Image sliderFill;
     [SerializeField] private GameObject player;
     [SerializeField] private XRGrabNetworkInteractable XRGrabNetworkInteractable;
+    [SerializeField] private GameObject UItimer;
 
     private bool Cooking = false;
     private float maxElapsedTime;
@@ -70,5 +71,24 @@ public class SteakTimer : MonoBehaviour
     public void SetCookingFalse()
     {
         Cooking = false;
+    }
+
+    public void HoverEnter (HoverEnterEventArgs e)
+    {
+        Debug.Log("entered");
+        if (e.interactorObject.transform.CompareTag("Flame")){
+            SetCookingTrue();
+            UItimer.SetActive(true);
+        }
+    }
+
+    public void HoverExited(HoverExitEventArgs e)
+    {
+        Debug.Log("exited");
+        if (e.interactorObject.transform.CompareTag("Flame"))
+        {
+            SetCookingFalse();
+            UItimer.SetActive(false);
+        }
     }
 }
