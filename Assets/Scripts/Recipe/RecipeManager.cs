@@ -53,6 +53,8 @@ public class RecipeManager : MonoBehaviour
         
         while (recipeIndex < _recipes.Count)
         {
+            Debug.Log(meal);
+            Debug.Log(_recipes[recipeIndex].GetRecipeIngredients());
             if (meal == _recipes[recipeIndex].GetRecipeIngredients())
             {
                 Debug.Log("Feat recipe");
