@@ -1213,6 +1213,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e50499484a6be04398c4f0b870f3530, type: 3}
+--- !u!114 &157338314 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3453576309827295031, guid: 0e50499484a6be04398c4f0b870f3530, type: 3}
+  m_PrefabInstance: {fileID: 157338313}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4823ff4022dd4ac794774dfaa7d3247d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &159616932 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 247349e37d7743c4481a8afb9df0a2fc, type: 3}
@@ -1285,6 +1296,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4095104994848880565, guid: 78f6b33b036a9d7478db054f4b4ed3a6, type: 3}
+      propertyPath: recipeManager
+      value: 
+      objectReference: {fileID: 157338314}
     - target: {fileID: 5659883271572238114, guid: 78f6b33b036a9d7478db054f4b4ed3a6, type: 3}
       propertyPath: m_Size.y
       value: 0.5
