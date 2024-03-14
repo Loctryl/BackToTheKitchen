@@ -15,6 +15,7 @@ public class SteakTimer : MonoBehaviour
     [SerializeField] private Image sliderFill;
     [SerializeField] private GameObject player;
     [SerializeField] private XRGrabNetworkInteractable XRGrabNetworkInteractable;
+    [SerializeField] private GameObject UItimer;
 
     private bool Cooking = false;
     private float maxElapsedTime;
@@ -58,7 +59,7 @@ public class SteakTimer : MonoBehaviour
             particuleSystem.SetActive(true);
             filter.mesh = trashMesh;
             Cooking = false;
-            XRGrabNetworkInteractable.interactionLayers = InteractionLayerMask.GetMask("Nothing");
+            XRGrabNetworkInteractable.interactionLayers = InteractionLayerMask.GetMask("RawIngredients");
         }
     }
 
@@ -70,5 +71,23 @@ public class SteakTimer : MonoBehaviour
     public void SetCookingFalse()
     {
         Cooking = false;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Flame"))
+        {
+            SetCookingTrue();
+            UItimer.SetActive(true);
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.collider.CompareTag("Flame"))
+        {
+            SetCookingFalse();
+            UItimer.SetActive(false);
+        }
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class CookingSteak : MonoBehaviour
 {
-    [SerializeField] private GameObject socket;
     [SerializeField] private GameObject particle;
 
     [SerializeField] private bool onStove = false;
@@ -24,8 +23,8 @@ public class CookingSteak : MonoBehaviour
     {
         if (other.CompareTag("RawSteak") && onStove)
         {
-            socket.SetActive(true);
             particle.SetActive(true);
+            other.GetComponent<SteakTimer>().SetCookingTrue();
         }
     }
 
@@ -33,8 +32,8 @@ public class CookingSteak : MonoBehaviour
     {
         if (other.CompareTag("RawSteak"))
         {
-            socket.SetActive(false);
             particle.SetActive(false);
+            other.GetComponent<SteakTimer>().SetCookingFalse();
         }
     }
 
@@ -45,11 +44,5 @@ public class CookingSteak : MonoBehaviour
     public void SetOnStoveFalse()
     {
         onStove = false;
-    }
-
-    public void SelectAttachPoint(SelectEnterEventArgs args)
-    {
-        Debug.Log(args.interactableObject);
-        //if (args.interactableObject == )
     }
 }

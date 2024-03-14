@@ -28,6 +28,7 @@ public class Bar : MonoBehaviour
             if (_timeOnBar >= timeToServe)
             {
                 recipeManager.ServeDish(_dish);
+                _dish.GetComponent<Dish>().DeletingDish();
                 _timeOnBar = 0;
                 Destroy(_dish);
             }
