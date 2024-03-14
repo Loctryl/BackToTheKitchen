@@ -4507,7 +4507,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5544843954889725799, guid: 11d9c2d4a31153d48871dba786324550, type: 3}
     m_RemovedGameObjects:
     - {fileID: 5544843954673248510, guid: 11d9c2d4a31153d48871dba786324550, type: 3}
     - {fileID: 5544843953036595191, guid: 11d9c2d4a31153d48871dba786324550, type: 3}
@@ -15425,9 +15426,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Complete XR Origin Set Up
       objectReference: {fileID: 0}
+    - target: {fileID: 3775288644637048289, guid: 98b28f9890310e44997a3d00cdc32029, type: 3}
+      propertyPath: m_StartingGroupMembers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5418391614904731353, guid: 98b28f9890310e44997a3d00cdc32029, type: 3}
       propertyPath: m_CameraYOffset
-      value: 1.5
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 6018547637984666342, guid: 98b28f9890310e44997a3d00cdc32029, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15469,8 +15474,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8152248677202727454, guid: 98b28f9890310e44997a3d00cdc32029, type: 3}
+      propertyPath: m_StartingGroupMembers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3741190617714234945, guid: 98b28f9890310e44997a3d00cdc32029, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98b28f9890310e44997a3d00cdc32029, type: 3}

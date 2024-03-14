@@ -157,7 +157,7 @@ MonoBehaviour:
   slicedObj: {fileID: 8083942040284150545, guid: ac0a5c02a46d22c4683c55a8db620731, type: 3}
   optionalSecondObj: {fileID: 0}
   instantiateNumber: 1
-  ChoppingSound: {fileID: -2887408564538282147, guid: 4beeed4c3a9eb074081f4e5f8390f579, type: 3}
+  ChoppingSound: {fileID: -5386404700064044736}
 --- !u!114 &-8545872485934647380
 MonoBehaviour:
   m_ObjectHideFlags: 0
