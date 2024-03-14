@@ -96,7 +96,6 @@ public class SteakTimer : MonoBehaviourPunCallbacks
     {
         if (collision.collider.CompareTag("Flame"))
         {
-            SetCookingTrue();
             UItimer.SetActive(true);
         }
     }
@@ -105,7 +104,6 @@ public class SteakTimer : MonoBehaviourPunCallbacks
     {
         if (collision.collider.CompareTag("Flame"))
         {
-            SetCookingFalse();
             UItimer.SetActive(false);
         }
     }
