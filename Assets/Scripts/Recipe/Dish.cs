@@ -24,11 +24,21 @@ public class Dish : MonoBehaviour
         
         while (current)
         {
-            Debug.Log(current);
             ingredients.Add(current.objectIndex);
             current = current.socketedObj;
         }
         
         return ingredients;
+    }
+
+    public void DeletingDish()
+    {
+        Sockatable current = gameObject.GetComponent<Sockatable>();
+        
+        while (current)
+        {
+            Destroy(current.gameObject);
+            current = current.socketedObj;
+        }
     }
 }
