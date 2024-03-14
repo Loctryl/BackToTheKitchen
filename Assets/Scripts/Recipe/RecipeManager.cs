@@ -50,9 +50,8 @@ public class RecipeManager : MonoBehaviour
     {
         int recipeIndex = 0;
         List<int> meal = dish.GetComponent<Dish>().GetIngredients();
-        Debug.Log("Serve me");
         
-        while (recipeIndex <= _recipes.Count)
+        while (recipeIndex < _recipes.Count)
         {
             if (meal == _recipes[recipeIndex].GetRecipeIngredients())
             {
