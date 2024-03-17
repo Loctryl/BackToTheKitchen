@@ -8,6 +8,8 @@ The first goal was to learn about making VR game using Unity. We started with th
 So, it's VR coop game where you have to prepare burgers in a restaurant.
 Cutting ingrdients, cooking meat and assembling burgers are the main features.
 
+Thank you yo ***Kay Lousberg*** for the asset pack : https://www.kaylousberg.com/game-assets/restaurant-bits
+
 
 ## Screenshots 
 ![image5](https://github.com/Loctryl/BackToTheKitchen-VROnline/assets/91985442/027980b5-9a60-4d1e-9562-10aa701641a1)
